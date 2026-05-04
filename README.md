@@ -1,14 +1,14 @@
-# pa_pvp mini
+# pa_pvp mini 🧩
 
-Use pa_pvp when something looks plausible, but you do not want to trust it yet.
+🧪 Use pa_pvp when something looks plausible, but you do not want to trust it yet.
 
 It can be your idea, a plan, a prompt, a procedure, a code fix, a proposal, or an AI-generated answer.
 
-pa_pvp puts it under adversarial review.
+⚔️ pa_pvp puts it under adversarial review.
 
 It looks for gaps, weak logic, missing constraints, fragile assumptions, and shaky fixes.
 
-Then you can pass the result to another AI chat.
+🔁 Then you can pass the result to another AI chat.
 The next AI checks the material again and challenges the previous review.
 
 No praise.
@@ -17,44 +17,44 @@ Just concrete problems and structural fixes.
 
 ---
 
-## When to use it
+## 🧭 When to use it
 
 Use it when:
 
-* you have an idea that sounds good but may have gaps
-* an AI gave you an answer and you do not fully trust it
-* you have proposed fixes and want to know which ones hold up
-* you wrote a plan, prompt, procedure, proposal, or spec and want a stricter review
-* you want another AI to challenge the previous review instead of just agreeing with it
+* 💡 you have an idea that sounds good but may have gaps
+* 🤖 an AI gave you an answer and you do not fully trust it
+* 🛠️ you have proposed fixes and want to know which ones hold up
+* 📄 you wrote a plan, prompt, procedure, proposal, or spec and want a stricter review
+* 🥊 you want another AI to challenge the previous review instead of just agreeing with it
 
 Examples of material you can review:
 
-* instructions for someone else
-* a plan or proposal
-* a decision memo
-* a process or checklist
-* a policy or rule set
-* a prompt or AI workflow
-* a structured argument
-* a research outline
-* a technical spec
-* a list of bugs, fixes, or refactors
-* an AI-generated answer that sounds plausible but needs pressure-testing
+* 📝 instructions for someone else
+* 🗺️ a plan or proposal
+* 🧾 a decision memo
+* ✅ a process or checklist
+* 📜 a policy or rule set
+* 🧠 a prompt or AI workflow
+* 🧱 a structured argument
+* 🔍 a research outline
+* 🧩 a technical spec
+* 🐛 a list of bugs, fixes, or refactors
+* 🤖 an AI-generated answer that sounds plausible but needs pressure-testing
 
 It works best when the input has structure: steps, claims, constraints, rules, dependencies, expected behavior, or internal logic.
 
 ---
 
-## What it gives back
+## 📦 What it gives back
 
 Each review returns a short list of findings.
 
 Each finding must include:
 
-* what breaks
-* evidence from the material under review
-* severity
-* a concrete fix
+* 💥 what breaks
+* 📌 evidence from the material under review
+* 🚦 severity
+* 🛠️ a concrete fix
 
 If a problem has no valid fix, it should not appear as a finding.
 
@@ -62,7 +62,7 @@ The goal is not to collect opinions. The goal is to produce review items that ca
 
 ---
 
-## Basic use
+## 🚀 Basic use
 
 Activate pa_pvp mini as the behavioral contract for the session.
 
@@ -81,14 +81,14 @@ The AI returns Round 1.
 
 ---
 
-## Using two AI chats
+## 🔁 Using two AI chats
 
 pa_pvp mini can be used as a ping-pong between two AI chats.
 
 Each AI checks two things:
 
-1. the material itself
-2. the previous AI's review
+1. 🧩 the material itself
+2. 🧪 the previous AI's review
 
 That is the ping-pong.
 One AI finds gaps in the work.
@@ -114,7 +114,7 @@ Each round carries the review forward without requiring shared memory between ch
 
 ---
 
-## Starting from an existing review
+## 🧲 Starting from an existing review
 
 You do not have to start from a pa_pvp round.
 
@@ -124,7 +124,7 @@ pa_pvp mini will check that material against the artifact instead of simply acce
 
 ---
 
-## When to apply fixes
+## 🛠️ When to apply fixes
 
 Do not apply every finding automatically.
 
@@ -136,7 +136,7 @@ Pure wording changes only matter when the wording creates real ambiguity in how 
 
 ---
 
-## Limits
+## ⚠️ Limits
 
 pa_pvp mini does not prove that something is correct.
 It does not find every problem.
@@ -145,16 +145,24 @@ Use it as a review aid, not as authority.
 
 ---
 
-<details>
-<summary>Technical reference</summary>
+## 📝 Note
 
-## Purpose
+pa_pvp mini was developed with AI assistance.
+
+AI helped shape, test, and revise the protocol. Final responsibility for the published version remains with the author.
+
+---
+
+<details>
+<summary>🧰 Technical reference</summary>
+
+## 🎯 Purpose
 
 pa_pvp mini turns an AI chat into an adversarial reviewer.
 
 The reviewer's job is not to improve style. Its job is to identify what breaks, what is weak, what is missing, and what structural fix should exist instead.
 
-## Source authority
+## 📌 Source authority
 
 `ORIGINAL_ARTIFACT` is the primary source of truth.
 
@@ -169,33 +177,33 @@ The reviewer must ignore chat memory, hidden context, prior assistant assumption
 * `PREVIOUS_ROUND_OUTPUT`
 * `MEMORY_NOTE`
 
-## Input blocks
+## 🧱 Input blocks
 
-### `ORIGINAL_ARTIFACT`
+### `ORIGINAL_ARTIFACT` 🧩
 
 Required.
 
 The artifact under review. This is always the primary source of truth.
 
-### `PREVIOUS_ROUND_OUTPUT`
+### `PREVIOUS_ROUND_OUTPUT` 🔁
 
 Optional for Round 1.
 
 Used in Round 2+ as prior review material to audit. It may contain output from pa_pvp mini or another structured review source.
 
-### `MEMORY_NOTE`
+### `MEMORY_NOTE` 🧠
 
 Optional.
 
 A short carry-over note for context between sessions. It is still audit material, not source authority.
 
-### `CURRENT_ROUND`
+### `CURRENT_ROUND` 🔢
 
 Optional.
 
 An explicit round number. When present, it overrides inferred round detection.
 
-## Round detection
+## 🧭 Round detection
 
 If `CURRENT_ROUND` is explicitly provided, use that value.
 
@@ -206,7 +214,7 @@ Otherwise:
 * if prior material includes explicit round numbers, set current round to the highest previous round number plus one
 * if prior material exists but no explicit round number is available, use Round 2
 
-## Review rules
+## ⚙️ Review rules
 
 A finding must be:
 
@@ -236,7 +244,7 @@ Mechanics beat heuristics. If a rule depends on judgment, the reviewer must name
 
 The reviewer must not include praise, encouragement, or narrative commentary.
 
-## Section concentration rule
+## 🧯 Section concentration rule
 
 No more than two findings should target the same section.
 
@@ -246,7 +254,7 @@ Exception: if one section contains concentrated structural failure, the reviewer
 SECTION OVERLOAD JUSTIFIED
 ```
 
-## Finding count
+## 🔢 Finding count
 
 The reviewer may identify up to five structural findings.
 
@@ -258,7 +266,7 @@ If more than five valid findings exist, it must keep the strongest and cut the w
 
 It must not pad the output to reach a number.
 
-## Severity
+## 🚦 Severity
 
 Severity has three levels.
 
@@ -270,7 +278,7 @@ Severity has three levels.
 
 If severity is ambiguous, the reviewer must choose the lower severity and say why.
 
-## Round 1 behavior
+## 🥇 Round 1 behavior
 
 Round 1 produces one independent full review using only `ORIGINAL_ARTIFACT` as source authority.
 
@@ -280,7 +288,7 @@ All Round 1 findings are labeled:
 INDEPENDENT
 ```
 
-## Round 2+ behavior
+## 🔁 Round 2+ behavior
 
 Round 2+ must execute in strict order:
 
@@ -307,7 +315,7 @@ Every Round 2+ finding must use one of these labels:
 * `CHALLENGED`
 * `NEW`
 
-## Provenance
+## 🧬 Provenance
 
 Every finding line includes:
 
@@ -338,7 +346,7 @@ Otherwise use:
 NONE
 ```
 
-## Output format
+## 🧾 Output format
 
 Every output starts with:
 
@@ -360,7 +368,7 @@ FINDINGS:
 
 Round 2+ also includes Merge Status.
 
-## Merge Status
+## 🧮 Merge Status
 
 Merge Status appears only in Round 2+.
 
@@ -374,27 +382,27 @@ MERGE STATUS:
 - conflicts: [finding_id] [independent review position] [prior audit position]
 ```
 
-### `confirmed_fixes_ready`
+### `confirmed_fixes_ready` ✅
 
 Fixes from prior material that held up under the current round.
 
-### `challenged_items`
+### `challenged_items` 🥊
 
 Prior findings or fixes that the current round disputes.
 
 A challenge may happen because a prior item is invalid, overstated, duplicated, weak, not anchored to the artifact, or not structurally relevant.
 
-### `new_fixes`
+### `new_fixes` 🆕
 
 Fixes for problems found in the current round that were not present in the previous round.
 
-### `conflicts`
+### `conflicts` ⚠️
 
 Direct contradictions between the current independent review and the prior audit position.
 
 Conflicts must be declared explicitly instead of silently resolved.
 
-## End marker
+## 🔚 End marker
 
 The protocol ends with:
 
