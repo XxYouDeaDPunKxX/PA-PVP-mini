@@ -145,6 +145,14 @@ Use it as a review aid, not as authority.
 
 ---
 
+## 📜 License
+
+This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+
+SPDX: `CC-BY-SA-4.0`
+
+---
+
 ## 📝 Note
 
 pa_pvp mini was developed with AI assistance.
