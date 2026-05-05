@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pa_pvp mini — Adversarial review protocol</title>
+  <meta name="description" content="A compact adversarial review loop for work that sounds plausible but needs pressure before it moves forward.">
+  <meta name="theme-color" content="#15171A">
+  <meta property="og:title" content="pa_pvp mini">
+  <meta property="og:description" content="Don’t trust plausible. Test it.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" aria-label="Site header">
+    <div class="brand" aria-label="pa_pvp mini">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" role="img">
+          <rect x="3" y="3" width="42" height="42" rx="12"></rect>
+          <path d="M20 15L11 24l9 9"></path>
+          <path d="M28 15l9 9-9 9"></path>
+          <circle cx="24" cy="24" r="3.8"></circle>
+        </svg>
+      </span>
+      <span>pa_pvp mini</span>
+    </div>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#loop">Loop</a>
+      <a href="#use">Use</a>
+      <a href="#limits">Limits</a>
+      <a href="https://github.com/XxYouDeaDPunKxX/PA-PVP-mini">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow">Adversarial review protocol</p>
+        <h1>Don’t trust plausible. Test it.</h1>
+        <p class="lead">
+          pa_pvp mini is a compact review loop for answers, plans, prompts, fixes, and decisions that need pressure before they move forward.
+        </p>
+        <div class="hero-actions" aria-label="Primary actions">
+          <a class="button button-primary" href="https://github.com/XxYouDeaDPunKxX/PA-PVP-mini/blob/main/pa_pvp%20mini%20v2.3.txt">Get the protocol</a>
+          <a class="button button-secondary" href="https://github.com/XxYouDeaDPunKxX/PA-PVP-mini">View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="hero-panel" aria-label="Protocol snapshot">
+        <div class="panel-topline">
+          <span>pressure pass</span>
+          <span class="status-dot">active</span>
+        </div>
+        <div class="rail">
+          <div class="rail-step">
+            <span class="rail-index">01</span>
+            <strong>Start clean</strong>
+            <p>Read the work before inheriting the last opinion.</p>
+          </div>
+          <div class="rail-step">
+            <span class="rail-index">02</span>
+            <strong>Challenge hard</strong>
+            <p>Find the break, the missing rule, the weak assumption.</p>
+          </div>
+          <div class="rail-step">
+            <span class="rail-index">03</span>
+            <strong>Keep what survives</strong>
+            <p>Carry forward confirmed fixes. Reject weak findings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="loop" class="section loop-section">
+      <div class="section-heading">
+        <p class="eyebrow">The loop</p>
+        <h2>A review loop built for resistance.</h2>
+        <p>
+          One pass is useful. A second pass is where the first review gets tested instead of trusted.
+        </p>
+      </div>
+
+      <div class="loop-grid" aria-label="Review loop">
+        <article class="loop-card">
+          <span class="card-number">01</span>
+          <h3>Clean pass</h3>
+          <p>Each round starts from the work itself, before the previous review gets a vote.</p>
+        </article>
+
+        <article class="loop-card">
+          <span class="card-number">02</span>
+          <h3>Counter-pass</h3>
+          <p>The next review attacks both the original work and the last review’s weak spots.</p>
+        </article>
+
+        <article class="loop-card">
+          <span class="card-number">03</span>
+          <h3>Merge pressure</h3>
+          <p>Confirmed issues survive. Weak findings die. New structural fixes move forward.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="use" class="section use-section">
+      <div class="section-heading">
+        <p class="eyebrow">Use cases</p>
+        <h2>Use it when “good enough” is not good enough.</h2>
+        <p>
+          If the work sounds convincing and the cost of being wrong matters, put it under pressure first.
+        </p>
+      </div>
+
+      <div class="use-list" aria-label="Suitable review targets">
+        <span>AI answers</span>
+        <span>Plans</span>
+        <span>Prompts</span>
+        <span>Procedures</span>
+        <span>Code fixes</span>
+        <span>Decision notes</span>
+        <span>Proposals</span>
+      </div>
+    </section>
+
+    <section class="section demo-section">
+      <div class="section-heading">
+        <p class="eyebrow">Output shape</p>
+        <h2>Not comments. Findings.</h2>
+        <p>
+          The output is designed to be checked, challenged, merged, or applied.
+        </p>
+      </div>
+
+      <article class="finding-card" aria-label="Example finding">
+        <div class="finding-row">
+          <span>Break</span>
+          <p>The fallback depends on a condition that is never defined.</p>
+        </div>
+        <div class="finding-row">
+          <span>Evidence</span>
+          <p>The plan explains the success path, but never names the failure path.</p>
+        </div>
+        <div class="finding-row compact">
+          <span>Severity</span>
+          <p><strong class="severity">MED</strong></p>
+        </div>
+        <div class="finding-row">
+          <span>Fix</span>
+          <p>Add a decision rule for the failure path before execution.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section ping-section">
+      <div class="section-heading">
+        <p class="eyebrow">Ping-pong mode</p>
+        <h2>Second opinions that do not just agree.</h2>
+      </div>
+
+      <div class="ping-grid" aria-label="Ping pong review flow">
+        <article>
+          <span>Chat A</span>
+          <strong>clean pressure pass</strong>
+        </article>
+        <article>
+          <span>Chat B</span>
+          <strong>fresh pass + audit of A</strong>
+        </article>
+        <article>
+          <span>Chat A</span>
+          <strong>checks what survived</strong>
+        </article>
+        <article>
+          <span>Repeat</span>
+          <strong>until useful structural fixes stop appearing</strong>
+        </article>
+      </div>
+
+      <p class="ping-note">
+        Move the same work between two chats. Each round starts fresh, then attacks the previous review instead of inheriting it.
+      </p>
+    </section>
+
+    <section id="limits" class="section limits-section">
+      <div class="limits-card">
+        <div>
+          <p class="eyebrow">Boundaries</p>
+          <h2>What it does not pretend to do.</h2>
+        </div>
+        <ul>
+          <li>It does not prove truth.</li>
+          <li>It does not replace judgment.</li>
+          <li>It does not remove model limits.</li>
+          <li>It is built to expose structural weakness, not polish language.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>pa_pvp mini</strong>
+      <p>Adversarial review protocol.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/XxYouDeaDPunKxX/PA-PVP-mini/blob/main/pa_pvp%20mini%20v2.3.txt">Protocol file</a>
+      <a href="https://github.com/XxYouDeaDPunKxX/PA-PVP-mini">GitHub repository</a>
+      <a href="https://github.com/XxYouDeaDPunKxX/PA-PVP-mini/blob/main/LICENSE">CC BY-SA 4.0</a>
+    </div>
+  </footer>
+</body>
+</html>
