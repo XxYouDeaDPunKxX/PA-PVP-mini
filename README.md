@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/pa-pvp-mini-hero.png" alt="PA-PVP-mini adversarial review protocol overview">
+</p>
+
 # pa_pvp mini 🧩
 
 🧪 Use pa_pvp when something looks plausible, but you do not want to trust it yet.
@@ -82,6 +86,12 @@ The AI returns Round 1.
 ---
 
 ## 🔁 Using two AI chats
+
+<p align="center">
+  <img src="assets/pa-pvp-mini-two-ai-mode.png" alt="Two AI chats reviewing the same artifact in alternating passes" width="760">
+</p>
+
+<p align="center"><em>Two different passes, one artifact under pressure.</em></p>
 
 pa_pvp mini can be used as a ping-pong between two AI chats.
 
