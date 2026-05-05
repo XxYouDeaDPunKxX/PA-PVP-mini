@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Pressure map</title>
+  <desc id="desc">A dark operational SVG showing a central artifact under review, pressure vectors, and finding markers.</desc>
+
+  <defs>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#252932" stop-opacity=".86"/>
+      <stop offset=".55" stop-color="#191c21" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#101215" stop-opacity=".84"/>
+    </linearGradient>
+
+    <linearGradient id="artifact" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#343a44"/>
+      <stop offset="1" stop-color="#171a1f"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#000000" flood-opacity=".34"/>
+    </filter>
+
+    <marker id="arrowOxide" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d65a31"/>
+    </marker>
+
+    <marker id="arrowMuted" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7f8792"/>
+    </marker>
+
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#ffffff" stroke-opacity=".045" stroke-width="1"/>
+    </pattern>
+
+    <style>
+      .label { font: 700 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .16em; }
+      .small { font: 650 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .12em; }
+      .body { font: 520 15px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="358" rx="30" fill="url(#panel)" stroke="#343a44" stroke-opacity=".75"/>
+  <rect x="1" y="1" width="1198" height="358" rx="30" fill="url(#grid)" opacity=".9"/>
+
+  <path d="M90 68H360" stroke="#7f8792" stroke-opacity=".22"/>
+  <path d="M840 292H1110" stroke="#7f8792" stroke-opacity=".2"/>
+  <path d="M112 292C230 244 300 255 392 214" fill="none" stroke="#7f8792" stroke-opacity=".13"/>
+  <path d="M808 92C930 132 986 105 1094 154" fill="none" stroke="#7f8792" stroke-opacity=".13"/>
+
+  <g opacity=".62">
+    <circle cx="102" cy="72" r="4" fill="#d65a31"/>
+    <circle cx="1076" cy="288" r="4" fill="#d6a84f"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect x="457" y="54" width="286" height="252" rx="22" fill="url(#artifact)" stroke="#6f7781" stroke-opacity=".48"/>
+    <path d="M707 54v48h36" fill="none" stroke="#f1f3f0" stroke-opacity=".48"/>
+    <rect x="488" y="90" width="80" height="20" rx="6" fill="#f1f3f0" fill-opacity=".08"/>
+    <text x="501" y="104" class="small" fill="#a9b0b8">ARTIFACT</text>
+
+    <path d="M500 137H673" stroke="#f1f3f0" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+    <path d="M500 159H697" stroke="#f1f3f0" stroke-opacity=".28" stroke-width="3" stroke-linecap="round"/>
+    <path d="M500 181H635" stroke="#f1f3f0" stroke-opacity=".23" stroke-width="3" stroke-linecap="round"/>
+    <path d="M500 224H610" stroke="#d65a31" stroke-opacity=".8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M500 244H656" stroke="#d65a31" stroke-opacity=".44" stroke-width="3" stroke-linecap="round"/>
+
+    <rect x="622" y="208" width="84" height="62" rx="12" fill="#101215" fill-opacity=".52" stroke="#7f8792" stroke-opacity=".22"/>
+    <path d="M638 226H689M638 244H676" stroke="#a9b0b8" stroke-opacity=".28" stroke-width="2" stroke-linecap="round"/>
+
+    <circle cx="500" cy="137" r="4" fill="#a9b0b8" fill-opacity=".5"/>
+    <circle cx="500" cy="159" r="4" fill="#a9b0b8" fill-opacity=".38"/>
+    <circle cx="500" cy="181" r="4" fill="#a9b0b8" fill-opacity=".26"/>
+  </g>
+
+  <g>
+    <path d="M190 120 C276 122 322 154 410 165" fill="none" stroke="#d65a31" stroke-width="3" stroke-opacity=".85" marker-end="url(#arrowOxide)"/>
+    <path d="M190 176 C284 176 330 178 410 178" fill="none" stroke="#d65a31" stroke-width="3" stroke-opacity=".7" marker-end="url(#arrowOxide)"/>
+    <path d="M190 232 C284 228 326 204 410 191" fill="none" stroke="#d65a31" stroke-width="3" stroke-opacity=".55" marker-end="url(#arrowOxide)"/>
+
+    <path d="M1010 118 C928 122 880 150 790 163" fill="none" stroke="#7f8792" stroke-width="3" stroke-opacity=".72" marker-end="url(#arrowMuted)"/>
+    <path d="M1010 178 C914 178 874 178 790 178" fill="none" stroke="#d65a31" stroke-width="3" stroke-opacity=".72" marker-end="url(#arrowOxide)"/>
+    <path d="M1010 238 C918 232 874 206 790 192" fill="none" stroke="#7f8792" stroke-width="3" stroke-opacity=".45" marker-end="url(#arrowMuted)"/>
+  </g>
+
+  <g opacity=".9">
+    <rect x="86" y="96" width="186" height="64" rx="18" fill="#101215" fill-opacity=".52" stroke="#343a44"/>
+    <text x="112" y="123" class="label" fill="#d65a31">BREAK</text>
+    <text x="112" y="146" class="body" fill="#a9b0b8">weak point found</text>
+
+    <rect x="88" y="194" width="220" height="64" rx="18" fill="#101215" fill-opacity=".43" stroke="#343a44"/>
+    <text x="114" y="221" class="label" fill="#d65a31">EVIDENCE</text>
+    <text x="114" y="244" class="body" fill="#a9b0b8">anchored to artifact</text>
+  </g>
+
+  <g opacity=".9">
+    <rect x="906" y="92" width="204" height="64" rx="18" fill="#101215" fill-opacity=".48" stroke="#343a44"/>
+    <text x="932" y="119" class="label" fill="#a9b0b8">PRESSURE</text>
+    <text x="932" y="142" class="body" fill="#a9b0b8">review pass active</text>
+
+    <rect x="886" y="198" width="226" height="66" rx="18" fill="#101215" fill-opacity=".52" stroke="#343a44"/>
+    <text x="912" y="226" class="label" fill="#d65a31">FIX</text>
+    <text x="912" y="249" class="body" fill="#a9b0b8">survives review</text>
+  </g>
+
+  <g>
+    <path d="M430 78C338 74 284 78 214 90" fill="none" stroke="#7f8792" stroke-opacity=".26" stroke-width="2" stroke-dasharray="8 10"/>
+    <path d="M770 282C862 286 920 282 994 270" fill="none" stroke="#7f8792" stroke-opacity=".22" stroke-width="2" stroke-dasharray="8 10"/>
+    <text x="488" y="332" class="small" fill="#7f8792">PRESSURE MAP / STRUCTURAL REVIEW</text>
+  </g>
+</svg>

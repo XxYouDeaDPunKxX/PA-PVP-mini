@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
+  <title id="title">Ping-pong stop condition</title>
+  <desc id="desc">Operational SVG showing alternating review passes between two chats until no useful structural fix remains.</desc>
+
+  <defs>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#252932" stop-opacity=".78"/>
+      <stop offset=".58" stop-color="#191c21" stop-opacity=".70"/>
+      <stop offset="1" stop-color="#101215" stop-opacity=".82"/>
+    </linearGradient>
+
+    <linearGradient id="pathGlow" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#d65a31" stop-opacity=".22"/>
+      <stop offset=".5" stop-color="#d65a31" stop-opacity=".82"/>
+      <stop offset="1" stop-color="#d6a84f" stop-opacity=".62"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="20" flood-color="#000000" flood-opacity=".32"/>
+    </filter>
+
+    <marker id="arrowOxide" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d65a31"/>
+    </marker>
+
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d6a84f"/>
+    </marker>
+
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#ffffff" stroke-opacity=".038" stroke-width="1"/>
+    </pattern>
+
+    <style>
+      .label { font: 800 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .16em; }
+      .micro { font: 700 10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .12em; }
+      .body { font: 650 14px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="258" rx="30" fill="url(#panel)" stroke="#343a44" stroke-opacity=".72"/>
+  <rect x="1" y="1" width="1198" height="258" rx="30" fill="url(#grid)"/>
+
+  <text x="72" y="52" class="label" fill="#d65a31">PING-PONG MODE</text>
+  <text x="904" y="52" class="label" fill="#d65a31">STOP CONDITION</text>
+
+  <!-- cards -->
+  <g filter="url(#softShadow)">
+    <rect x="80" y="92" width="190" height="96" rx="22" fill="#101215" fill-opacity=".72" stroke="#343a44"/>
+    <text x="112" y="126" class="label" fill="#7f8792">CHAT A</text>
+    <path d="M112 152H210" stroke="#f1f3f0" stroke-opacity=".30" stroke-width="3" stroke-linecap="round"/>
+    <path d="M112 170H234" stroke="#d65a31" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/>
+
+    <rect x="370" y="92" width="190" height="96" rx="22" fill="#101215" fill-opacity=".74" stroke="#343a44"/>
+    <text x="402" y="126" class="label" fill="#7f8792">CHAT B</text>
+    <path d="M402 152H512" stroke="#f1f3f0" stroke-opacity=".30" stroke-width="3" stroke-linecap="round"/>
+    <path d="M402 170H484" stroke="#d65a31" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/>
+
+    <rect x="660" y="92" width="190" height="96" rx="22" fill="#101215" fill-opacity=".72" stroke="#343a44"/>
+    <text x="692" y="126" class="label" fill="#7f8792">CHAT A</text>
+    <path d="M692 152H804" stroke="#f1f3f0" stroke-opacity=".30" stroke-width="3" stroke-linecap="round"/>
+    <path d="M692 170H770" stroke="#d65a31" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/>
+
+    <rect x="940" y="84" width="190" height="112" rx="24" fill="#101215" fill-opacity=".78" stroke="#343a44"/>
+    <text x="972" y="120" class="label" fill="#d6a84f">STOP</text>
+    <path d="M972 148H1074" stroke="#f1f3f0" stroke-opacity=".28" stroke-width="3" stroke-linecap="round"/>
+    <path d="M972 168H1042" stroke="#7f8792" stroke-opacity=".28" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="1096" cy="116" r="10" fill="none" stroke="#d6a84f" stroke-opacity=".72" stroke-width="3"/>
+    <path d="M1090 116l5 5 10-13" fill="none" stroke="#d6a84f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- alternating path -->
+  <path d="M270 126C314 88 336 88 370 126" fill="none" stroke="url(#pathGlow)" stroke-width="3" marker-end="url(#arrowOxide)"/>
+  <path d="M560 154C604 194 626 194 660 154" fill="none" stroke="url(#pathGlow)" stroke-width="3" marker-end="url(#arrowOxide)"/>
+  <path d="M850 126C896 90 914 92 940 126" fill="none" stroke="url(#pathGlow)" stroke-width="3" marker-end="url(#arrowAmber)"/>
+
+  <!-- lower merge statuses -->
+  <g opacity=".90">
+    <rect x="118" y="210" width="160" height="24" rx="12" fill="#d6a84f" fill-opacity=".12" stroke="#d6a84f" stroke-opacity=".34"/>
+    <text x="140" y="226" class="micro" fill="#d6a84f">CONFIRMED</text>
+
+    <rect x="410" y="210" width="162" height="24" rx="12" fill="#d65a31" fill-opacity=".13" stroke="#d65a31" stroke-opacity=".36"/>
+    <text x="432" y="226" class="micro" fill="#d65a31">CHALLENGED</text>
+
+    <rect x="704" y="210" width="118" height="24" rx="12" fill="#7f8792" fill-opacity=".12" stroke="#7f8792" stroke-opacity=".30"/>
+    <text x="728" y="226" class="micro" fill="#a9b0b8">NEW</text>
+
+    <rect x="956" y="210" width="170" height="24" rx="12" fill="#101215" fill-opacity=".52" stroke="#343a44"/>
+    <text x="978" y="226" class="micro" fill="#a9b0b8">NO USEFUL FIX</text>
+  </g>
+
+  <!-- faint trace loop -->
+  <g opacity=".33">
+    <path d="M168 72C330 34 458 34 620 72S930 110 1050 72" fill="none" stroke="#7f8792" stroke-width="2" stroke-dasharray="8 10"/>
+    <path d="M154 196C322 238 478 238 638 196S924 154 1058 196" fill="none" stroke="#7f8792" stroke-width="2" stroke-dasharray="8 10"/>
+    <circle cx="168" cy="72" r="3" fill="#d65a31"/>
+    <circle cx="1058" cy="196" r="3" fill="#d6a84f"/>
+  </g>
+</svg>

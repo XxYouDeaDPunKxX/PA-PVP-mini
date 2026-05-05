@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="160" viewBox="0 0 1200 160" role="img" aria-labelledby="title desc">
+  <title id="title">Micro ledger</title>
+  <desc id="desc">A compact operational ledger showing confirmed and challenged review items.</desc>
+
+  <defs>
+    <linearGradient id="row" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#252932" stop-opacity=".86"/>
+      <stop offset="1" stop-color="#15171a" stop-opacity=".90"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="-16%" y="-26%" width="132%" height="152%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity=".30"/>
+    </filter>
+
+    <style>
+      .label { font: 800 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .16em; }
+      .small { font: 700 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .10em; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="160" fill="none"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="42" y="18" width="1116" height="124" rx="24" fill="url(#row)" stroke="#343a44" stroke-opacity=".82" stroke-width="1"/>
+
+    <path d="M42 58H1158M42 100H1158" stroke="#343a44" stroke-opacity=".92"/>
+    <path d="M282 18V142M598 18V142M838 18V142" stroke="#343a44" stroke-opacity=".92"/>
+
+    <text x="76" y="44" class="label" fill="#d65a31">ITEM</text>
+    <text x="314" y="44" class="label" fill="#a9b0b8">STATUS</text>
+    <text x="630" y="44" class="label" fill="#a9b0b8">SOURCE</text>
+    <text x="872" y="44" class="label" fill="#a9b0b8">ACTION</text>
+
+    <text x="76" y="85" class="small" fill="#f1f3f0" opacity=".78">finding_alpha</text>
+    <rect x="314" y="68" width="116" height="24" rx="12" fill="#d6a84f" fill-opacity=".15" stroke="#d6a84f" stroke-opacity=".40"/>
+    <text x="334" y="84" class="small" fill="#d6a84f">CONFIRMED</text>
+    <text x="630" y="85" class="small" fill="#7f8792">round_a</text>
+    <text x="872" y="85" class="small" fill="#a9b0b8">carry_fix</text>
+
+    <text x="76" y="126" class="small" fill="#f1f3f0" opacity=".66">finding_beta</text>
+    <rect x="314" y="110" width="122" height="24" rx="12" fill="#d65a31" fill-opacity=".15" stroke="#d65a31" stroke-opacity=".42"/>
+    <text x="334" y="126" class="small" fill="#d65a31">CHALLENGED</text>
+    <text x="630" y="126" class="small" fill="#7f8792">round_b</text>
+    <text x="872" y="126" class="small" fill="#a9b0b8">replace</text>
+  </g>
+
+  <g opacity=".28">
+    <path d="M44 154H244" stroke="#7f8792" stroke-opacity=".44"/>
+    <circle cx="44" cy="154" r="2.5" fill="#d65a31"/>
+    <path d="M956 154H1156" stroke="#7f8792" stroke-opacity=".44"/>
+    <circle cx="1156" cy="154" r="2.5" fill="#d6a84f"/>
+  </g>
+</svg>
