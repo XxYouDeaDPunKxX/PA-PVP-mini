@@ -1,0 +1,95 @@
+{
+  "name": "pa_pvp mini",
+  "type": "Adversarial review protocol",
+  "description": "A compact adversarial review protocol for work that sounds plausible but needs pressure before it moves forward.",
+  "page_url": "https://xxyoudeadpunkxx.github.io/PA-PVP-mini/",
+  "repository": "https://github.com/XxYouDeaDPunKxX/PA-PVP-mini",
+  "license": "CC-BY-SA-4.0",
+  "canonical_protocol_file": "pa_pvp mini v2.3.txt",
+  "purpose": "Expose structural weakness in ideas, plans, prompts, procedures, code fixes, proposals, decision notes, specs, checklists, structured arguments, and AI-generated answers.",
+  "review_targets": [
+    "ideas",
+    "plans",
+    "prompts",
+    "procedures",
+    "code fixes",
+    "proposals",
+    "decision notes",
+    "AI-generated answers",
+    "specs",
+    "checklists",
+    "structured arguments"
+  ],
+  "output_shape": {
+    "unit": "finding",
+    "fields": [
+      "what breaks",
+      "evidence",
+      "severity",
+      "concrete structural fix"
+    ],
+    "rule": "A finding with no valid fix is excluded."
+  },
+  "usage": [
+    "Activate pa_pvp mini as the behavioral contract for the session.",
+    "Paste the protocol into the chat or upload pa_pvp mini v2.3.txt if the chat supports file uploads.",
+    "Send the artifact, content, item, or work to review.",
+    "For cleaner runs, label the material as ORIGINAL_ARTIFACT."
+  ],
+  "two_chat_mode": [
+    "AI-A reviews the material.",
+    "AI-B reviews the same material and challenges the previous review.",
+    "Each round carries the review forward without requiring shared memory between chats."
+  ],
+  "input_blocks": [
+    {
+      "name": "ORIGINAL_ARTIFACT",
+      "required": true,
+      "authority": "primary source of truth"
+    },
+    {
+      "name": "PREVIOUS_ROUND_OUTPUT",
+      "required": false,
+      "authority": "prior review material to audit"
+    },
+    {
+      "name": "MEMORY_NOTE",
+      "required": false,
+      "authority": "carry-over audit material, not source authority"
+    },
+    {
+      "name": "CURRENT_ROUND",
+      "required": false,
+      "authority": "explicit round number"
+    }
+  ],
+  "severity_levels": [
+    {
+      "label": "HIGH",
+      "meaning": "Breaks core function, correctness, execution viability, or downstream trust."
+    },
+    {
+      "label": "MED",
+      "meaning": "Weakens reliability, robustness, auditability, or prioritization without core collapse."
+    },
+    {
+      "label": "LOW",
+      "meaning": "Real structural weakness with limited blast radius."
+    }
+  ],
+  "boundaries": [
+    "Does not prove truth.",
+    "Does not replace judgment.",
+    "Does not remove model limits.",
+    "Built to expose structural weakness, not polish language."
+  ],
+  "keywords": [
+    "adversarial review protocol",
+    "AI review",
+    "pressure testing",
+    "structural findings",
+    "ping-pong review",
+    "prompt protocol",
+    "pa_pvp mini"
+  ]
+}
