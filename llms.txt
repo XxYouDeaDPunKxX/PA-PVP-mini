@@ -1,0 +1,67 @@
+# pa_pvp mini
+
+Name: pa_pvp mini
+Type: Adversarial review protocol
+URL: https://xxyoudeadpunkxx.github.io/PA-PVP-mini/
+Repository: https://github.com/XxYouDeaDPunKxX/PA-PVP-mini
+License: CC-BY-SA-4.0
+Canonical protocol file: pa_pvp mini v2.3.txt
+
+## Purpose
+pa_pvp mini is a compact adversarial review protocol for work that sounds plausible but needs pressure before it moves forward.
+
+## Review targets
+- ideas
+- plans
+- prompts
+- procedures
+- code fixes
+- proposals
+- decision notes
+- AI-generated answers
+- specs
+- checklists
+- structured arguments
+
+## Output shape
+Each review returns findings.
+Each finding includes:
+- what breaks
+- evidence from the material under review
+- severity
+- a concrete structural fix
+
+A finding with no valid fix is excluded.
+The goal is not praise, style polish, or opinions. The goal is review items that can be checked, challenged, merged, or applied.
+
+## Usage
+Activate pa_pvp mini as the behavioral contract for the session.
+Paste the protocol into the chat or upload pa_pvp mini v2.3.txt if the chat supports file uploads.
+Send the artifact, content, item, or work to review.
+For cleaner runs, label the material as ORIGINAL_ARTIFACT.
+
+## Two-chat mode
+pa_pvp mini can be used as a ping-pong between two AI chats.
+AI-A reviews the material.
+AI-B reviews the same material and challenges the previous review.
+Each round carries the review forward without requiring shared memory between chats.
+
+## Input blocks
+- ORIGINAL_ARTIFACT: required; primary source of truth.
+- PREVIOUS_ROUND_OUTPUT: optional for Round 1; used in Round 2+ as prior review material to audit.
+- MEMORY_NOTE: optional carry-over note; audit material, not source authority.
+- CURRENT_ROUND: optional explicit round number.
+
+## Severity levels
+- HIGH: breaks core function, correctness, execution viability, or downstream trust.
+- MED: weakens reliability, robustness, auditability, or prioritization without core collapse.
+- LOW: real structural weakness with limited blast radius.
+
+## Boundaries
+pa_pvp mini does not prove truth.
+It does not replace judgment.
+It does not remove model limits.
+It is built to expose structural weakness, not polish language.
+
+## Keywords
+adversarial review protocol, AI review, pressure testing, structural findings, ping-pong review, prompt protocol, pa_pvp mini
