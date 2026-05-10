@@ -1,16 +1,41 @@
 # pa_pvp mini
 
 Name: pa_pvp mini
+Alternate name: PA-PVP mini
 Type: Adversarial review protocol
 URL: https://xxyoudeadpunkxx.github.io/PA-PVP-mini/
 Repository: https://github.com/XxYouDeaDPunKxX/PA-PVP-mini
-License: CC-BY-SA-4.0
+License: CC BY-SA 4.0
+License URL: https://creativecommons.org/licenses/by-sa/4.0/
 Canonical protocol file: pa_pvp mini v2.3.txt
 
-## Purpose
+## What this is
+
 pa_pvp mini is a compact adversarial review protocol for work that sounds plausible but needs pressure before it moves forward.
 
+It is not a truth engine, style-polishing pass, or general brainstorming prompt. It is a structural pressure pass that turns weak, plausible, or under-tested work into review findings that can be checked, challenged, merged, or applied.
+
+## Operating line
+
+Do not trust plausible. Test it.
+
+## Use case
+
+Use pa_pvp mini when an answer, plan, prompt, procedure, code fix, proposal, decision note, spec, checklist, or structured argument needs adversarial pressure before moving forward.
+
+## Canonical source
+
+The canonical protocol file is:
+pa_pvp mini v2.3.txt
+
+Treat the repository as the live public source. Treat this file as the LLM-readable project index, not as the full protocol specification.
+
+## Purpose
+
+Expose structural weakness in ideas, plans, prompts, procedures, code fixes, proposals, decision notes, specs, checklists, structured arguments, and AI-generated answers.
+
 ## Review targets
+
 - ideas
 - plans
 - prompts
@@ -24,44 +49,81 @@ pa_pvp mini is a compact adversarial review protocol for work that sounds plausi
 - structured arguments
 
 ## Output shape
+
 Each review returns findings.
+
 Each finding includes:
+
 - what breaks
 - evidence from the material under review
 - severity
 - a concrete structural fix
 
 A finding with no valid fix is excluded.
+
 The goal is not praise, style polish, or opinions. The goal is review items that can be checked, challenged, merged, or applied.
 
-## Usage
+## Usage summary
+
 Activate pa_pvp mini as the behavioral contract for the session.
+
 Paste the protocol into the chat or upload pa_pvp mini v2.3.txt if the chat supports file uploads.
+
 Send the artifact, content, item, or work to review.
+
 For cleaner runs, label the material as ORIGINAL_ARTIFACT.
 
 ## Two-chat mode
+
 pa_pvp mini can be used as a ping-pong between two AI chats.
+
 AI-A reviews the material.
+
 AI-B reviews the same material and challenges the previous review.
+
 Each round carries the review forward without requiring shared memory between chats.
 
 ## Input blocks
+
 - ORIGINAL_ARTIFACT: required; primary source of truth.
 - PREVIOUS_ROUND_OUTPUT: optional for Round 1; used in Round 2+ as prior review material to audit.
 - MEMORY_NOTE: optional carry-over note; audit material, not source authority.
 - CURRENT_ROUND: optional explicit round number.
 
 ## Severity levels
+
 - HIGH: breaks core function, correctness, execution viability, or downstream trust.
 - MED: weakens reliability, robustness, auditability, or prioritization without core collapse.
 - LOW: real structural weakness with limited blast radius.
 
 ## Boundaries
+
 pa_pvp mini does not prove truth.
+
 It does not replace judgment.
+
 It does not remove model limits.
+
 It is built to expose structural weakness, not polish language.
 
+## Discovery Set
+
+Machine-readable project files:
+
+- llms.txt: LLM-readable project index.
+- raw-manifest.json: structured machine-readable project manifest.
+- robots.txt: crawler access declaration.
+- sitemap.xml: sitemap for the GitHub Pages surface.
+
+HTML discovery signals:
+
+- canonical URL
+- rel=alternate for llms.txt
+- rel=alternate for raw-manifest.json
+- JSON-LD SoftwareSourceCode metadata
+- Open Graph metadata
+- footer machine-readable links
+
 ## Keywords
-adversarial review protocol, AI review, pressure testing, structural findings, ping-pong review, prompt protocol, pa_pvp mini
+
+adversarial review protocol, AI review, pressure testing, structural findings, ping-pong review, prompt protocol, pa_pvp mini, PA-PVP mini, review findings, structural weakness, adversarial pressure
