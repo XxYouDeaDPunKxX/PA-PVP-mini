@@ -1,12 +1,17 @@
 {
   "name": "pa_pvp mini",
+  "alternate_name": "PA-PVP mini",
   "type": "Adversarial review protocol",
   "description": "A compact adversarial review protocol for work that sounds plausible but needs pressure before it moves forward.",
+  "url": "https://xxyoudeadpunkxx.github.io/PA-PVP-mini/",
   "page_url": "https://xxyoudeadpunkxx.github.io/PA-PVP-mini/",
   "repository": "https://github.com/XxYouDeaDPunKxX/PA-PVP-mini",
-  "license": "CC-BY-SA-4.0",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "canonical_protocol_file": "pa_pvp mini v2.3.txt",
+  "identity": "Do not trust plausible. Test it.",
   "purpose": "Expose structural weakness in ideas, plans, prompts, procedures, code fixes, proposals, decision notes, specs, checklists, structured arguments, and AI-generated answers.",
+  "use_case": "Use pa_pvp mini when an answer, plan, prompt, procedure, code fix, proposal, decision note, spec, checklist, or structured argument needs adversarial pressure before moving forward.",
   "review_targets": [
     "ideas",
     "plans",
@@ -83,6 +88,26 @@
     "Does not remove model limits.",
     "Built to expose structural weakness, not polish language."
   ],
+  "discovery_set": {
+    "llms": "llms.txt",
+    "manifest": "raw-manifest.json",
+    "robots": "robots.txt",
+    "sitemap": "sitemap.xml",
+    "html_signals": [
+      "canonical URL",
+      "rel=alternate for llms.txt",
+      "rel=alternate for raw-manifest.json",
+      "JSON-LD SoftwareSourceCode metadata",
+      "Open Graph metadata",
+      "footer machine-readable links"
+    ]
+  },
+  "machine_readable_files": [
+    "llms.txt",
+    "raw-manifest.json",
+    "robots.txt",
+    "sitemap.xml"
+  ],
   "keywords": [
     "adversarial review protocol",
     "AI review",
@@ -90,6 +115,10 @@
     "structural findings",
     "ping-pong review",
     "prompt protocol",
-    "pa_pvp mini"
+    "pa_pvp mini",
+    "PA-PVP mini",
+    "review findings",
+    "structural weakness",
+    "adversarial pressure"
   ]
 }
