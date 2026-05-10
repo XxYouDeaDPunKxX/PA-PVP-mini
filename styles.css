@@ -562,6 +562,12 @@ h3 {
     color: var(--text)
 }
 
+.footer-stack {
+    display: grid;
+    gap: 0.85rem;
+    justify-items: end
+}
+
 .footer-links {
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -574,6 +580,25 @@ h3 {
 
 .footer-links a:hover {
     color: var(--text)
+}
+
+.machine-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.45rem 0.7rem;
+    color: var(--muted-2);
+    font-size: 0.78rem
+}
+
+.machine-links a {
+    color: inherit
+}
+
+.machine-links a:hover,
+.machine-links a:focus-visible {
+    color: var(--text);
+    text-decoration: underline
 }
 
 @media (max-width:900px) {
@@ -628,6 +653,13 @@ h3 {
         flex-direction: column
     }
 
+    .footer-stack,
+    .footer-links,
+    .machine-links {
+        justify-items: start;
+        justify-content: flex-start
+    }
+
     .nav-links {
         width: 100%;
         overflow-x: auto;
@@ -652,7 +684,8 @@ h3 {
 
     .button,
     .nav-links a,
-    .footer-links a {
+    .footer-links a,
+    .machine-links a {
         transition: transform 160ms ease, color 160ms ease, background 160ms ease, border-color 160ms ease
     }
 }
