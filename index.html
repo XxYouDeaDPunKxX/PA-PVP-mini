@@ -66,7 +66,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" aria-label="Site header">
+  <header class="site-header shell-row" aria-label="Site header">
     <div class="brand" aria-label="pa_pvp mini">
       <span class="brand-mark" aria-hidden="true">
         <svg viewBox="0 0 48 48" role="img">
@@ -87,16 +87,16 @@
     </nav>
   </header>
 
-  <main id="main">
-    <section class="hero section">
-      <div class="hero-copy">
+  <main id="main" class="page-flow">
+    <section class="hero shell section phi-pair phi-pair-hero">
+      <div class="hero-copy copy-stack copy-stack-hero">
         <p class="eyebrow">Adversarial review protocol</p>
         <h1>Don’t trust plausible. Test it.</h1>
         <p class="lead">
           pa_pvp mini is a compact review loop for answers, plans, prompts, fixes, and decisions that need pressure
           before they move forward.
         </p>
-        <div class="hero-actions" aria-label="Primary actions">
+        <div class="hero-actions cta-row" aria-label="Primary actions">
           <a class="button button-primary"
             href="https://github.com/XxYouDeaDPunKxX/PA-PVP-mini/blob/main/pa_pvp%20mini%20v2.3.txt">Get the
             protocol</a>
@@ -129,33 +129,33 @@
       </div>
     </section>
 
-    <section id="loop" class="section loop-section">
-      <div class="section-visual visual-pressure-map" aria-hidden="true">
-        <img src="assets/pressure-map.svg" alt="">
-      </div>
-
-      <div class="section-heading" style="margin: 0px;">
+    <section id="loop" class="section shell loop-section section-stack">
+      <div class="section-heading copy-stack centered-copy">
         <p class="eyebrow">The loop</p>
         <h2>A review loop built for resistance.</h2>
-        <p style="position: relative;top: -80%;">
+        <p>
           One pass is useful. A second pass is where the first review gets tested instead of trusted.
         </p>
       </div>
 
-      <div class="loop-grid" aria-label="Review loop">
-        <article class="loop-card">
+      <figure class="section-visual visual-pressure-map" aria-hidden="true">
+        <img src="assets/pressure-map.svg" alt="">
+      </figure>
+
+      <div class="loop-grid card-grid card-grid-three" aria-label="Review loop">
+        <article class="loop-card info-card">
           <span class="card-number">01</span>
           <h3>Clean pass</h3>
           <p>Each round starts from the work itself, before the previous review gets a vote.</p>
         </article>
 
-        <article class="loop-card">
+        <article class="loop-card info-card">
           <span class="card-number">02</span>
           <h3>Counter-pass</h3>
           <p>The next review attacks both the original work and the last review’s weak spots.</p>
         </article>
 
-        <article class="loop-card">
+        <article class="loop-card info-card">
           <span class="card-number">03</span>
           <h3>Merge pressure</h3>
           <p>Confirmed issues survive. Weak findings die. New structural fixes move forward.</p>
@@ -163,20 +163,18 @@
       </div>
     </section>
 
-    <section id="use" class="section use-section">
-      <div class="section-visual visual-transition-trace" aria-hidden="true">
-        <img src="assets/transition-trace.svg" alt="">
+    <section id="use" class="section shell use-section section-stack">
+      <div class="section-heading copy-stack centered-copy">
+        <p class="eyebrow">Use cases</p>
+        <h2>Use it when “good enough” is not good enough.</h2>
+        <p>
+          If the work sounds convincing and the cost of being wrong matters, put it under pressure first.
+        </p>
       </div>
 
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Use cases</p>
-          <p>
-            If the work sounds convincing and the cost of being wrong matters, put it under pressure first.
-          </p>
-        </div>
-        <h2>Use it when “good enough” is not good enough.</h2>
-      </div>
+      <figure class="section-visual visual-transition-trace" aria-hidden="true">
+        <img src="assets/transition-trace.svg" alt="">
+      </figure>
 
       <div class="use-list" aria-label="Suitable review targets">
         <span>AI answers</span>
@@ -189,17 +187,16 @@
       </div>
     </section>
 
-    <section class="section demo-section">
-      <div class="section-visual visual-finding-flow" aria-hidden="true">
-        <img src="assets/finding-flow.svg" alt="">
-      </div>
-
-      <div class="section-heading" style="top: 32%;">
+    <section class="section shell demo-section phi-pair phi-pair-copy">
+      <div class="demo-copy copy-stack">
         <p class="eyebrow">Output shape</p>
         <h2>Not comments. Findings.</h2>
-        <p style="margin-top: 16px;">
+        <p>
           The output is designed to be checked, challenged, merged, or applied.
         </p>
+        <figure class="section-visual visual-finding-flow" aria-hidden="true">
+          <img src="assets/finding-flow.svg" alt="">
+        </figure>
       </div>
 
       <article class="finding-card" aria-label="Example finding">
@@ -222,15 +219,15 @@
       </article>
     </section>
 
-    <section class="section ping-section">
-      <div class="section-visual visual-demo-ledger" aria-hidden="true">
-        <img src="assets/micro-ledger-v3.svg" alt="">
-      </div>
-
-      <div class="section-heading">
+    <section class="section shell ping-section section-stack">
+      <div class="section-heading copy-stack centered-copy">
         <p class="eyebrow">Ping-pong mode</p>
         <h2>Second opinions that do not just agree.</h2>
       </div>
+
+      <figure class="section-visual visual-demo-ledger" aria-hidden="true">
+        <img src="assets/micro-ledger-v3.svg" alt="">
+      </figure>
 
       <div class="ping-grid" aria-label="Ping pong review flow">
         <article>
@@ -255,14 +252,14 @@
         Move the same work between two chats. Each round starts fresh, then attacks the previous review instead of
         inheriting it.
       </p>
-      <div class="section-visual visual-ping-stop" aria-hidden="true">
+      <figure class="section-visual visual-ping-stop" aria-hidden="true">
         <img src="assets/pingpong-stop.svg" alt="">
-      </div>
+      </figure>
     </section>
 
-    <section id="limits" class="section limits-section">
-      <div class="limits-card">
-        <div>
+    <section id="limits" class="section shell limits-section">
+      <div class="limits-card phi-pair phi-pair-copy">
+        <div class="copy-stack">
           <p class="eyebrow">Boundaries</p>
           <h2>What it does not pretend to do.</h2>
         </div>
@@ -276,7 +273,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer shell section-stack">
     <div>
       <strong>pa_pvp mini</strong>
       <p>Adversarial review protocol.</p>
