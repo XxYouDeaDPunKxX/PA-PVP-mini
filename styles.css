@@ -157,7 +157,7 @@ figure {
 
 .page-flow {
   display: grid;
-  gap: var(--s-3);
+  gap: 0;
 }
 
 .section {
