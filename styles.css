@@ -157,12 +157,20 @@ figure {
 
 .page-flow {
   display: grid;
-  gap: var(--s-4);
+  gap: var(--s-3);
 }
 
 .section {
   position: relative;
-  padding: var(--s-4) 0;
+  padding: var(--s-3) 0;
+}
+
+.hero {
+  padding-bottom: var(--s-1);
+}
+
+.loop-section {
+  padding-top: var(--s-1);
 }
 
 .phi-pair {
