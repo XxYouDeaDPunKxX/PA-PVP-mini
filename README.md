@@ -163,11 +163,13 @@ SPDX: `CC-BY-SA-4.0`
 
 ---
 
-## 📝 Note
+## 🤖 AI-assisted development
 
-pa_pvp mini was developed with AI assistance.
+This project was developed with AI assistance.
 
-AI helped shape, test, and revise the protocol. Final responsibility for the published version remains with the author.
+The project, documentation, and repository materials were shaped through human-directed work supported by AI tools during drafting, structuring, review, and refinement.
+
+AI assistance does not make the project automatically correct, complete, or suitable for every use case. Read it, test it, and adapt it to your own context.
 
 ---
 
